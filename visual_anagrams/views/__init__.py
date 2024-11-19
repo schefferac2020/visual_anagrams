@@ -11,6 +11,7 @@ from .view_patch_permute import PatchPermuteView
 from .view_jigsaw import JigsawView
 from .view_inner_circle import InnerCircleView, InnerCircleViewFailure
 from .view_square_hinge import SquareHingeView
+from .view_dremeline import DremelineView
 from .view_blur import BlurViewFailure
 from .view_white_balance import WhiteBalanceViewFailure
 from .view_hybrid import HybridLowPassView, HybridHighPassView, \
@@ -44,6 +45,7 @@ VIEW_MAP = {
     'grayscale': GrayscaleView,
     'color': ColorView,
     'motion': MotionBlurView,
+    'dremeline': DremelineView,
     'motion_res': MotionBlurResView,
     'scale': ScaleView,
 }
