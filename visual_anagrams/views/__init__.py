@@ -45,7 +45,7 @@ VIEW_MAP = {
     'grayscale': GrayscaleView,
     'color': ColorView,
     'motion': MotionBlurView,
-    'dremeline': DremelineView,
+    'dremeline2': DremelineView,
     'motion_res': MotionBlurResView,
     'scale': ScaleView,
 }

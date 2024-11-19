@@ -12,6 +12,18 @@ class DremelineView(PermuteView):
     Implements a "square hinge" view, where subsquares rotate 90 degrees.
     For an example, see https://www.youtube.com/watch?v=vrOjy-v5JgQ&t=120
 
+    Inherits from `PermuteView`, which implements the `view` and 
+    `inverse_view` functions as permutations. We just make
+    the correct permutation here, and implement the `make_frame` 
+    method for animation
+    '''
+    def __init__(self):
+        '''
+        Make the correct "square hinge" permutations and pass it to the
+        parent class constructor.
+        '''
+        self.perm_64 = make_square_hinge(im_size=64, num_squares=5)
+        self.perm_256 = make_square_hinge(im_size=256, num_squares=5)
         self.perm_1024 = make_square_hinge(im_size=1024, num_squares=5)
         
         print("This is perm_64:", self.perm_64)
