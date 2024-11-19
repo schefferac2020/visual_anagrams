@@ -54,7 +54,7 @@ def get_views(view_names, view_args=None):
     '''
     Bespoke function to get views (just to make command line usage easier)
     '''
-
+    print("IN get_views")
     views = []
     if view_args is None:
         view_args = [None for _ in view_names]
