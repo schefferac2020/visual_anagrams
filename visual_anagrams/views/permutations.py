@@ -59,7 +59,7 @@ def make_square_hinge(im_size=64, num_squares=3):
     We use a 3x3 grid of squares, so there will be 1 extra pixel
     for a size 256x256 square, which we just ignore
     '''
-
+    print("THIS IS THE NUM_SQUARES: ", num_squares)
     # Get size of sub square
     square_size = im_size // num_squares
 
