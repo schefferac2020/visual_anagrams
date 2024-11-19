@@ -22,9 +22,9 @@ class DremelineView(PermuteView):
         Make the correct "square hinge" permutations and pass it to the
         parent class constructor.
         '''
-        self.perm_64 = make_square_hinge(im_size=64)
-        self.perm_256 = make_square_hinge(im_size=256)
-        self.perm_1024 = make_square_hinge(im_size=1024)
+        self.perm_64 = make_square_hinge(im_size=64, num_squares=4)
+        self.perm_256 = make_square_hinge(im_size=256, num_squares=4)
+        self.perm_1024 = make_square_hinge(im_size=1024, num_squares=4)
 
         super().__init__(self.perm_64, self.perm_256, self.perm_1024)
 

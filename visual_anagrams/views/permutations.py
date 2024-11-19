@@ -52,7 +52,7 @@ def make_inner_circle_perm(im_size=64, r=24):
 
 
 
-def make_square_hinge(im_size=64):
+def make_square_hinge(im_size=64, num_squares=3):
     '''
     Makes permutations for "square hinge" view, given size of image.
     For an example, see https://www.youtube.com/watch?v=vrOjy-v5JgQ&t=120
@@ -61,14 +61,14 @@ def make_square_hinge(im_size=64):
     '''
 
     # Get size of sub square
-    square_size = im_size // 3
+    square_size = im_size // num_squares
 
     # Make idxs
     idxs = torch.arange(im_size**2).view(im_size, im_size)
 
     # Rotate sub squares 90 degrees, depending on location
-    for i in range(3):
-        for j in range(3):
+    for i in range(num_squares):
+        for j in range(num_squares):
             # Get direction to rotate
             k = -1 if (i+j)%2 == 0 else 1
 
